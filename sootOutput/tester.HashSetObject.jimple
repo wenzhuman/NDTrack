@@ -1,0 +1,26 @@
+public class tester.HashSetObject extends java.lang.Object
+{
+    public static java.util.HashSet m;
+    public static java.util.LinkedHashSet n;
+
+    public void <init>()
+    {
+        tester.HashSetObject this;
+
+        this := @this: tester.HashSetObject;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] argv;
+        java.util.HashSet $r0;
+
+        argv := @parameter0: java.lang.String[];
+        $r0 = new java.util.HashSet;
+        specialinvoke $r0.<java.util.HashSet: void <init>()>();
+        <tester.HashSetObject: java.util.HashSet m> = $r0;
+        return;
+    }
+}

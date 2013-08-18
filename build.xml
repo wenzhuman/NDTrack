@@ -1,0 +1,35 @@
+<target name="run-soot" depends="build">
+       <echo message="Analysing project located at ${soot.project}" />
+   <java classname="${soot.analysis}" fork="yes" classpathref="soot.classpath"
+       maxmemory="${HEAP_SIZE}">
+       <classpath>
+       <pathelement location="${soot.input}"/>
+       <fileset dir="${lib}">
+           <include name="**/*.jar" />
+       </fileset>
+       </classpath>
+
+       <arg value="--w" />
+       <arg value="-pp" />
+       <arg value="-d" />
+       <arg value="${soot.output}" />
+       <arg value="-process-dir" />
+       <arg value="${soot.input}" />
+       <arg value="--keep-line-number" />
+       <arg value="-p" />
+       <arg value="cg" />
+       <arg value="all-reachable" />
+       <arg value="--p" />
+       <arg value="cg.spark" />
+       <arg value="enabled:true" />
+       <arg value="--p" />
+       <arg value="cg.cha" />
+       <arg value="enabled:false" />
+       <arg value="--p" />
+       <arg value="jb" />
+       <arg value="use-original-names:${valOriginalNames}" />
+       <arg value="--xml-attributes" />
+       <arg value="-main-class" />
+       <arg value="${main-class}" />
+   </java>
+   </target>

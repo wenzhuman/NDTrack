@@ -1,0 +1,16 @@
+class tester.T extends java.lang.Object
+{
+    int s;
+
+    public void <init>(int)
+    {
+        tester.T this;
+        int s;
+
+        this := @this: tester.T;
+        s := @parameter0: int;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        this.<tester.T: int s> = s;
+        return;
+    }
+}

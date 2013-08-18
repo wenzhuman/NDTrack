@@ -1,0 +1,38 @@
+public class tester.TestSoot2 extends java.lang.Object
+{
+    public static int r;
+
+    public void <init>()
+    {
+        tester.TestSoot2 this;
+
+        this := @this: tester.TestSoot2;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        byte a, b;
+        java.util.Random d, $r0;
+        double e;
+        int b, $i0, $i1, a;
+
+        args := @parameter0: java.lang.String[];
+        a = 10;
+        b = 20;
+        $r0 = new java.util.Random;
+        specialinvoke $r0.<java.util.Random: void <init>()>();
+        d = $r0;
+        b = virtualinvoke d.<java.util.Random: int nextInt()>();
+        virtualinvoke d.<java.util.Random: int nextInt()>();
+        $i1 = virtualinvoke d.<java.util.Random: int nextInt()>();
+        a = a + $i1;
+        $i0 = b / 3;
+        e = (double) $i0;
+        <tester.TestSoot: int r> = b;
+        a = 4;
+        return;
+    }
+}
